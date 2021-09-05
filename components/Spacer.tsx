@@ -1,49 +1,31 @@
-import { CSSProperties, memo } from "react";
+import { memo } from "react";
 
 function SpacerHorizontal({
   inline,
   size,
 }: {
   inline?: boolean;
-  size?: CSSProperties["width"];
+  size?: number;
 }) {
   const Element = inline ? "span" : "div";
 
   const style = {
     display: inline ? "inline-block" : "block",
-    ...(size !== undefined
-      ? {
-          width: size,
-          minWidth: size,
-          maxWidth: size,
-        }
-      : { flex: 1 }),
+    ...(size !== undefined ? { "--size": `${size}px` } : { flex: 1 }),
   };
 
-  return <Element style={style} />;
+  return <Element className="spacer-horizontal" style={style} />;
 }
 
-function SpacerVertical({
-  inline,
-  size,
-}: {
-  inline?: boolean;
-  size?: CSSProperties["height"];
-}) {
+function SpacerVertical({ inline, size }: { inline?: boolean; size?: number }) {
   const Element = inline ? "span" : "div";
 
   const style = {
     display: inline ? "inline-block" : "block",
-    ...(size !== undefined
-      ? {
-          height: size,
-          minHeight: size,
-          maxHeight: size,
-        }
-      : { flex: 1 }),
+    ...(size !== undefined ? { "--size": `${size}px` } : { flex: 1 }),
   };
 
-  return <Element style={style} />;
+  return <Element className="spacer-vertical" style={style} />;
 }
 
 export const Spacer = {

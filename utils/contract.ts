@@ -1,4 +1,4 @@
-export const contractAddress = "0xA87a59aBF2A841D76791210724BFDa11Bc2B1b6e";
+export const contractAddress = "0x1308c158e60D7C4565e369Df2A86eBD853EeF2FB";
 
 export const abi = [
   "event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)",

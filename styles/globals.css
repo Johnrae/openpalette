@@ -58,6 +58,16 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  opacity: 0.85;
+}
+
+a:active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
 a.active {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -114,7 +124,17 @@ em {
 h1 {
   font-size: 2rem;
   font-weight: 300;
-  margin: 1rem;
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 2.5rem 0 1rem 0;
+  text-align: left;
+  text-decoration: underline;
 }
 
 header {
@@ -123,4 +143,39 @@ header {
   display: flex;
   justify-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.spacer-vertical {
+  height: var(--size);
+  min-height: var(--size);
+  max-height: var(--size);
+}
+
+.spacer-horizontal {
+  width: var(--size);
+  min-width: var(--size);
+  max-width: var(--size);
+}
+
+@media screen and (max-width: 600px) {
+  .spacer-vertical {
+    height: calc(var(--size) / 2);
+    min-height: calc(var(--size) / 2);
+    max-height: calc(var(--size) / 2);
+  }
+
+  .spacer-horizontal {
+    width: calc(var(--size) / 2);
+    min-width: calc(var(--size) / 2);
+    max-width: calc(var(--size) / 2);
+  }
+
+  button {
+    padding: 18px;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    margin: 2rem 20px 5rem 20px;
+  }
 }

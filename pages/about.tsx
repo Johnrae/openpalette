@@ -8,24 +8,26 @@ export default function About() {
         <meta name="description" content="About OpenPalette" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>OpenPalette</h1>
       <div
         style={{
           marginBottom: "4rem",
           maxWidth: "500px",
         }}
       >
+        <h1>OpenPalette</h1>
         <p>
           An <strong>OpenPalette</strong> is a randomized color palette
           generated on the ethereum blockchain. It can act as a public data
           source for generative art, games, website themes, and more. Feel free
           to use OpenPalette in any way you want.
         </p>
+        <h2>Supply</h2>
         <p>
           There are <strong>10,000</strong> palettes total, with #0 to #9899
           claimable by anyone, and #9900 to #9999 currently reserved for the
           contract deployer.
         </p>
+        <h2>Author</h2>
         <p>
           OpenPalette was created by{" "}
           <a href="https://twitter.com/dvnabbott">Devin Abbott</a> and heavily

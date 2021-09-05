@@ -5,7 +5,7 @@ import { Base64 } from "../utils/base64";
 import { contractAddress, abi } from "../utils/contract";
 
 function getOpenSeaUrl(index: number) {
-  return `https://testnets.opensea.io/assets/${contractAddress}/${index}`;
+  return `https://opensea.io/assets/${contractAddress}/${index}`;
 }
 
 function fromUTF8(uint8Array: Uint8Array) {
@@ -79,23 +79,36 @@ export default function Home() {
 
       setStatus("Minted.");
 
-      const tokenIds = await fetchAllTokenIds(contract, address);
+      try {
+        const tokenIds = await fetchAllTokenIds(contract, address);
 
-      tokenIds.reverse();
+        tokenIds.reverse();
 
-      const [newest] = tokenIds;
+        const [newest] = tokenIds;
 
-      console.log(tokenIds, newest);
+        console.log(tokenIds, newest);
 
-      const tokenUri = await contract.tokenURI(newest);
+        const tokenUri = await contract.tokenURI(newest);
 
-      setTokenUri(tokenUri);
-      setStatus(
-        <div>
-          Minted: <a href={getOpenSeaUrl(newest)}>Palette #{newest}</a>
-          <em>&nbsp;(It may take a minute to show)</em>
-        </div>
-      );
+        setTokenUri(tokenUri);
+        setStatus(
+          <div>
+            Minted: <a href={getOpenSeaUrl(newest)}>Palette #{newest}</a>
+            <em>&nbsp;(It may take a minute to show)</em>
+          </div>
+        );
+      } catch (e) {
+        console.log("Mint succeeded, but failed to fetch token ids");
+        console.log(e);
+
+        setStatus(
+          <div>
+            Minted. Your NFT will appear on{" "}
+            <a href="https://opensea.io/collection/open-palette">OpeaSea</a>{" "}
+            shortly.
+          </div>
+        );
+      }
     }
 
     setEnabled(false);
