@@ -32,7 +32,9 @@ export default function About() {
           OpenPalette was created by{" "}
           <a href="https://twitter.com/dvnabbott">Devin Abbott</a>. It was
           heavily inspired by <a href="https://www.lootproject.com/">Loot</a>{" "}
-          and <a href="https://twitter.com/developer_dao">Developer DAO</a>.
+          and <a href="https://twitter.com/developer_dao">Developer DAO</a>. The
+          OpenPalette logo was designed by{" "}
+          <a href="https://twitter.com/souporserious">Travis Arnold</a>.
         </p>
       </div>
     </div>

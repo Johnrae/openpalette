@@ -167,9 +167,21 @@ export default function Home() {
           }}
         />
       ) : (
-        <button onClick={mint} disabled={!enabled}>
-          Mint my <strong>OpenPalette</strong>
-        </button>
+        <>
+          <img
+            style={{
+              width: 300,
+              height: 300,
+              marginBottom: "4rem",
+              filter: "drop-shadow(0px 2px 4px black)",
+            }}
+            src="/logo.png"
+            alt=""
+          />
+          <button onClick={mint} disabled={!enabled}>
+            Mint my <strong>OpenPalette</strong>
+          </button>
+        </>
       )}
       <span className={"status " + (isMinting ? "flickerAnimation" : "")}>
         {status}
