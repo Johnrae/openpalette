@@ -1,4 +1,4 @@
-export const contractAddress = "0x568323B2339A9F1BaE40bc29874B76D8Bd0ca43D";
+export const contractAddress = "0xA87a59aBF2A841D76791210724BFDa11Bc2B1b6e";
 
 export const abi = [
   "event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)",
@@ -8,7 +8,6 @@ export const abi = [
   "function approve(address to, uint256 tokenId)",
   "function balanceOf(address owner) view returns (uint256)",
   "function claim()",
-  "function generateSVG(uint256 color1, uint256 color2, uint256 color3, uint256 color4, uint256 color5) pure returns (string)",
   "function getApproved(uint256 tokenId) view returns (address)",
   "function getColor1(uint256 tokenId) pure returns (uint256)",
   "function getColor2(uint256 tokenId) pure returns (uint256)",
@@ -16,10 +15,6 @@ export const abi = [
   "function getColor4(uint256 tokenId) pure returns (uint256)",
   "function getColor5(uint256 tokenId) pure returns (uint256)",
   "function getColors(uint256 tokenId) pure returns (string)",
-  "function getContrastingColor(uint256 color) pure returns (string)",
-  "function getGammaExpandedComponent(uint16 component) pure returns (uint256)",
-  "function getIsDark(uint16 r, uint16 g, uint16 b) pure returns (bool)",
-  "function getLuminance(uint16 r, uint16 g, uint16 b) pure returns (uint256)",
   "function isApprovedForAll(address owner, address operator) view returns (bool)",
   "function name() view returns (string)",
   "function owner() view returns (address)",
