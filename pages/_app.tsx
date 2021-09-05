@@ -36,8 +36,8 @@ export default function App({ Component, pageProps }: AppProps) {
         </NavLink>
         <Spacer.Horizontal inline size={60} />
         <NavLink href="https://twitter.com/open_pal">Twitter →</NavLink>
-        <Spacer.Horizontal inline size={60} />
-        <NavLink href="https://discord.gg/2ZXd7hfa">Discord →</NavLink>
+        {/* <Spacer.Horizontal inline size={60} />
+        <NavLink href="https://discord.gg/2ZXd7hfa">Discord →</NavLink> */}
       </header>
       <Spacer.Vertical size={20} />
       <Component {...pageProps} />
