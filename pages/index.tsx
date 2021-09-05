@@ -81,7 +81,7 @@ export default function Home() {
       const genericOpenSeaLink = (
         <div>
           Minted. Your NFT will appear on{" "}
-          <a href="https://opensea.io/collection/open-palette">OpeaSea</a>{" "}
+          <a href="https://opensea.io/collection/openpalette">OpeaSea</a>{" "}
           shortly.
         </div>
       );
@@ -111,7 +111,7 @@ export default function Home() {
         setStatus(
           <div>
             Minted. Your NFT will appear on{" "}
-            <a href="https://opensea.io/collection/open-palette">OpeaSea</a>{" "}
+            <a href="https://opensea.io/collection/openpalette">OpeaSea</a>{" "}
             shortly.
           </div>
         );
