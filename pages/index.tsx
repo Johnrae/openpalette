@@ -4,6 +4,10 @@ import { ReactNode, useCallback, useMemo, useState } from "react";
 import { Base64 } from "../utils/base64";
 import { contractAddress, abi } from "../utils/contract";
 
+function getOpenSeaUrl(index: number) {
+  return `https://testnets.opensea.io/assets/${contractAddress}/${index}`;
+}
+
 function fromUTF8(uint8Array: Uint8Array) {
   const decoder = new TextDecoder();
   return decoder.decode(uint8Array);
@@ -84,15 +88,6 @@ export default function Home() {
       console.log(tokenIds, newest);
 
       const tokenUri = await contract.tokenURI(newest);
-
-      setTokenUri(tokenUri);
-
-      function getOpenSeaUrl(index: number) {
-        return (
-          "https://testnets.opensea.io/assets/0x3fcf2ce06af7ad306576fe31d576f87f1694d4dd/" +
-          index
-        );
-      }
 
       setTokenUri(tokenUri);
       setStatus(

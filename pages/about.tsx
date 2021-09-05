@@ -22,6 +22,11 @@ export default function About() {
           to use OpenPalette in any way you want.
         </p>
         <p>
+          There are <strong>10,000</strong> palettes total, with #0 to #9899
+          claimable by anyone, and #9900 to #9999 currently reserved for the
+          contract deployer.
+        </p>
+        <p>
           OpenPalette was created by{" "}
           <a href="https://twitter.com/dvnabbott">Devin Abbott</a> and heavily
           inspired by <a href="https://www.lootproject.com/">Loot</a> and{" "}
