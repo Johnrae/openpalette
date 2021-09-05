@@ -17,9 +17,9 @@ export default function About() {
         <h1>OpenPalette</h1>
         <p>
           An <strong>OpenPalette</strong> is a randomized color palette
-          generated on the ethereum blockchain. It can act as a public data
-          source for generative art, games, website themes, and more. Feel free
-          to use OpenPalette in any way you want.
+          generated on the ethereum blockchain. It can act as a publicly
+          available data source for generative art, games, website themes, and
+          more. Feel free to use OpenPalette in any way you want.
         </p>
         <h2>Supply</h2>
         <p>
@@ -30,9 +30,9 @@ export default function About() {
         <h2>Author</h2>
         <p>
           OpenPalette was created by{" "}
-          <a href="https://twitter.com/dvnabbott">Devin Abbott</a> and heavily
-          inspired by <a href="https://www.lootproject.com/">Loot</a> and{" "}
-          <a href="https://twitter.com/developer_dao">Developer DAO</a>.
+          <a href="https://twitter.com/dvnabbott">Devin Abbott</a>. It was
+          heavily inspired by <a href="https://www.lootproject.com/">Loot</a>{" "}
+          and <a href="https://twitter.com/developer_dao">Developer DAO</a>.
         </p>
       </div>
     </div>

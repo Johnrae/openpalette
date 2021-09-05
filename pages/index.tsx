@@ -78,8 +78,21 @@ export default function Home() {
 
       setStatus("Minted.");
 
+      const genericOpenSeaLink = (
+        <div>
+          Minted. Your NFT will appear on{" "}
+          <a href="https://opensea.io/collection/open-palette">OpeaSea</a>{" "}
+          shortly.
+        </div>
+      );
+
       try {
         const tokenIds = await fetchAllTokenIds(contract, address);
+
+        if (tokenIds.length === 0) {
+          setStatus(genericOpenSeaLink);
+          return;
+        }
 
         tokenIds.reverse();
 
@@ -90,12 +103,7 @@ export default function Home() {
         const tokenUri = await contract.tokenURI(newest);
 
         setTokenUri(tokenUri);
-        setStatus(
-          <div>
-            Minted: <a href={getOpenSeaUrl(newest)}>Palette #{newest}</a>
-            <em>&nbsp;(It may take a minute to show)</em>
-          </div>
-        );
+        setStatus(genericOpenSeaLink);
       } catch (e) {
         console.log("Mint succeeded, but failed to fetch token ids");
         console.log(e);
@@ -128,12 +136,8 @@ export default function Home() {
   const svgString = useMemo(() => {
     if (!tokenUri) return;
 
-    // console.log(tokenUri);
-
     const tokenData = decodeTokenData(tokenUri);
     const imageData = tokenData.image;
-
-    // console.log(tokenData, imageData);
 
     return imageData;
   }, [tokenUri]);
