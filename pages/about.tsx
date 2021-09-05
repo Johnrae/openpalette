@@ -36,6 +36,16 @@ export default function About() {
           OpenPalette logo was designed by{" "}
           <a href="https://twitter.com/souporserious">Travis Arnold</a>.
         </p>
+        <h2>Contract</h2>
+        <p>
+          Here{"'"}s the contract on{" "}
+          <a href="https://etherscan.io/address/0x1308c158e60d7c4565e369df2a86ebd853eef2fb#code">
+            Etherscan
+          </a>
+          . The most interesting part turned out to be finding a contrasting
+          text color to draw over each background color. The calculation is
+          conceptually simple... but tricky to do without floating point math!
+        </p>
       </div>
     </div>
   );
