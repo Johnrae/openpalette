@@ -36,7 +36,6 @@ async function fetchAllTokenIds(contract: ethers.Contract, address: string) {
 
 export default function Home() {
   const ethereum = typeof window !== "undefined" && (window as any).ethereum;
-  console.log(Object.keys(ethereum));
   const [enabled, setEnabled] = useState(true);
   const [isMinting, setIsMinting] = useState(false);
   const [tokenUri, setTokenUri] = useState<string | undefined>(undefined);
@@ -147,8 +146,11 @@ export default function Home() {
       }}
     >
       <Head>
-        <title>Mint</title>
-        <meta name="description" content="Mint an OpenPalette" />
+        <title>OpenPalette</title>
+        <meta
+          name="description"
+          content="Blockchain-based color palette data."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {svgString ? (
