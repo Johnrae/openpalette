@@ -135,11 +135,13 @@ export default function Roadmap() {
         </p>
         <hr />
         <p>
-          If you&rsquo;re following me on Twitter (@dvnabbott or @open_pal),
-          you&rsquo;ll know this is my first foray into smart contracts, so
-          I&rsquo;m seeing this world with fresh eyes and figuring some things
-          out as I go. I&rsquo;ve really enjoyed being a part of the community
-          so far, and I can&rsquo;t wait to see what we can build together!
+          If you&rsquo;re following me on Twitter (
+          <a href="https://twitter.com/dvnabbott">@dvnabbott</a> or{" "}
+          <a href="https://twitter.com/open_pal">@open_pal</a>), you&rsquo;ll
+          know this is my first foray into smart contracts, so I&rsquo;m seeing
+          this world with fresh eyes and figuring some things out as I go.
+          I&rsquo;ve really enjoyed being a part of the community so far, and I
+          can&rsquo;t wait to see what we can build together!
         </p>
       </div>
     </div>
