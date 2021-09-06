@@ -18,7 +18,10 @@ function decodeTokenData(uri: string) {
   return JSON.parse(fromUTF8(Base64.decode(data)));
 }
 
-async function fetchAllTokenIds(contract: ethers.Contract, address: string) {
+export async function fetchAllTokenIds(
+  contract: ethers.Contract,
+  address: string
+) {
   let tokens: number[] = [];
 
   for (let index = 0; index < 10000; index++) {
