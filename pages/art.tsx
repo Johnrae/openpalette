@@ -51,10 +51,6 @@ export default function About() {
 
       const provider = new ethers.providers.Web3Provider(ethereum);
 
-      const signer = provider.getSigner();
-
-      const address = await signer.getAddress();
-
       const contract = new ethers.Contract(contractAddress, abi, provider);
 
       const colors = await contract.getColors(selectedId);

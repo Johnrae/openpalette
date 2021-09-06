@@ -93,7 +93,7 @@ p {
   margin-top: 1rem;
   font-size: 1.1rem;
   color: white;
-  line-height: 1.45;
+  line-height: 1.65;
   text-align: justify;
 }
 
@@ -181,6 +181,11 @@ header {
   .container {
     margin: 2rem 20px 5rem 20px;
   }
+
+  header {
+    justify-content: start;
+    padding: 0 20px;
+  }
 }
 
 select {
@@ -200,4 +205,20 @@ select {
   background: #444;
   color: white;
   font-size: 1.1rem;
+}
+
+li {
+  padding-left: 10px;
+}
+
+li::marker {
+  font-size: 1rem;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+.no-justify p {
+  text-align: left;
 }

@@ -29,6 +29,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <header>
         <NavLink href="/">Mint</NavLink>
         <Spacer.Horizontal inline size={60} />
+        <NavLink href="/roadmap">Roadmap</NavLink>
+        <Spacer.Horizontal inline size={60} />
         <NavLink href="/about">About</NavLink>
         <Spacer.Horizontal inline size={60} />
         <NavLink href="/art">Art</NavLink>
