@@ -1,8 +1,8 @@
 import { ethers } from "ethers";
 import Head from "next/head";
-import { ReactNode, useCallback, useMemo, useState } from "react";
+import { Spacer } from "../components/Spacer";
 import { Base64 } from "../utils/base64";
-import { contractAddress, abi } from "../utils/contract";
+import { contractAddress } from "../utils/contract";
 
 function getOpenSeaUrl(index: number) {
   return `https://opensea.io/assets/${contractAddress}/${index}`;
@@ -39,12 +39,7 @@ export async function fetchAllTokenIds(
 
 export default function Home() {
   return (
-    <div
-      className="container"
-      style={{
-        justifyContent: "center",
-      }}
-    >
+    <div className="container">
       <Head>
         <title>OpenPalette</title>
         <meta
@@ -53,23 +48,30 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <h1>OpenPalette</h1>
+      <p>On-chain, randomly generated color palette data.</p>
+      <Spacer.Vertical size={40} />
       <img
         style={{
-          width: 300,
-          height: 300,
-          marginBottom: "4rem",
+          width: 250,
+          height: 250,
           filter: "drop-shadow(0px 2px 4px black)",
+          alignSelf: "center",
         }}
         src="/logo.png"
         alt=""
       />
-      <button onClick={() => {}} disabled={true}>
-        Sold out.
-      </button>
-      <span className={"status flickerAnimation"}>
-        Thank you for the support! 🌈
-      </span>
+      <h2>Community Projects</h2>
+      <p>
+        <div>
+          <a href="https://openpalette-explorer.vercel.app/">Palette browser</a>
+          <br />
+          <a href="https://uniodex.github.io/red-billion/">
+            Open Palette Drifting (game)
+          </a>
+        </div>
+      </p>
+      <p></p>
     </div>
   );
 }

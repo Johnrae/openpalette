@@ -78,8 +78,7 @@ a.active {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 2rem 20px 10rem 20px;
+  margin: 4rem auto;
 }
 
 .status {
@@ -124,7 +123,7 @@ em {
 h1 {
   font-size: 2rem;
   font-weight: 300;
-  margin: 1rem 0 1.5rem 0;
+  margin: 1rem 0 1rem 0;
   text-align: center;
 }
 
