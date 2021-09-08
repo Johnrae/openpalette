@@ -63,13 +63,31 @@ export default function Home() {
       />
       <h2>Community Projects</h2>
       <p>
-        <div>
-          <a href="https://openpalette-explorer.vercel.app/">Palette browser</a>
-          <br />
-          <a href="https://uniodex.github.io/red-billion/">
-            Open Palette Drifting (game)
-          </a>
-        </div>
+        <a href="https://oplt.io" target="_blank" rel="noreferrer">
+          oplt.io
+        </a>
+        <Spacer.Horizontal size={6} inline />
+        <em style={{ fontSize: "1rem" }}>
+          — Your gateway into the world of OpenPalette
+        </em>
+        <br />
+        <br />
+        <a
+          href="https://openpalette-explorer.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Palette browser
+        </a>
+        <br />
+        <br />
+        <a
+          href="https://uniodex.github.io/red-billion/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open Palette Drifting (game)
+        </a>
       </p>
       <p></p>
     </div>
